@@ -1,5 +1,5 @@
 <template>
-	<button class="simplebutton" v-on="$listeners" v-bind="$props">
+	<button class="simplecirclebutton" v-on="$listeners" v-bind="$props">
 		<slot></slot>
 	</button>
 </template>
@@ -7,11 +7,11 @@
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
 @Component
-export default class SimpleButton extends Vue {}
+export default class SimpleCircleButton extends Vue {}
 </script>
 
 <style lang="scss">
-.simplebutton {
+.simplecirclebutton {
 	cursor: pointer;
 	border: none;
 	background: none;
@@ -23,7 +23,7 @@ export default class SimpleButton extends Vue {}
 	font-size: 1em;
 	font-weight: bold;
 
-	border-radius: 5px;
+	border-radius: 100px;
 	padding: 15px;
 	transition: 0.2s;
 

@@ -1,5 +1,5 @@
 <template>
-	<input class="simpleinput" v-on="$listeners" />
+	<input class="simpleinput" v-on="$listeners" v-bind="$props" />
 </template>
 
 <script lang="ts">
@@ -10,18 +10,16 @@ export default class SimpleInput extends Vue {}
 
 <style lang="scss">
 .simpleinput {
-	cursor: pointer;
 	border: none;
 	background: none;
 	outline: none;
-	border: 1px solid #36afff;
-	color: #36afff;
-	border-radius: 10px;
-	padding: 10px;
+
+	background-color: $nofocus-color;
+
+	font-size: 1em;
+
+	border-radius: 5px;
+	padding: 15px;
 	transition: 0.2s;
-	&:hover {
-		background-color: #36afff;
-		color: white;
-	}
 }
 </style>

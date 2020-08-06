@@ -1,5 +1,9 @@
 <template>
-	<input class="simplesearchinput" v-on="$listeners" />
+	<div class="simplesearchinput">
+		<i class="material-icons search__icon">search</i>
+		<input v-on="$listeners" v-bind="$props" />
+		<i class="material-icons">cancel</i>
+	</div>
 </template>
 
 <script lang="ts">
@@ -10,18 +14,28 @@ export default class SimpleSearchInput extends Vue {}
 
 <style lang="scss">
 .simplesearchinput {
-	cursor: pointer;
-	border: none;
-	background: none;
-	outline: none;
-	border: 1px solid #36afff;
-	color: #36afff;
-	border-radius: 10px;
-	padding: 10px;
+	display: flex;
+	align-items: center;
+
+	background-color: $focus-color;
+
+	border-radius: 20px;
+	padding: 15px;
 	transition: 0.2s;
-	&:hover {
-		background-color: #36afff;
-		color: white;
+	i {
+		color: $icon-color;
+	}
+	.search__icon {
+		margin-right: 10px;
+	}
+	input {
+		flex: 1;
+
+		border: none;
+		background: none;
+		outline: none;
+
+		font-size: 1em;
 	}
 }
 </style>
