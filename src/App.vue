@@ -5,33 +5,33 @@
 			<SimpleButton>Hello World</SimpleButton>
 		</div>
 		<div class="example">
-			<h2>SimpleTextInput</h2>
-			<SimpleTextInput></SimpleTextInput>
+			<h2>SimpleInput</h2>
+			<SimpleInput></SimpleInput>
 		</div>
 		<div class="example">
-			<h2>NeumorphismButton</h2>
-			<NeumorphismButton>Hello World</NeumorphismButton>
+			<h2>SimpleSearchInput</h2>
+			<SimpleSearchInput></SimpleSearchInput>
 		</div>
 		<div class="example">
-			<h2>NeumorphismTextInput</h2>
-			<NeumorphismTextInput></NeumorphismTextInput>
+			<h2>SimpleTextarea</h2>
+			<SimpleTextarea></SimpleTextarea>
 		</div>
 	</div>
 </template>
 
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
-import SimpleButton from "./components/Button/SimpleButton.vue";
-import SimpleTextInput from "./components/Input/SimpleTextInput.vue";
-import NeumorphismButton from "./components/Button/NeumorphismButton.vue";
-import NeumorphismTextInput from "./components/Input/NeumorphismTextInput.vue";
+import SimpleButton from "./components/SimpleButton.vue";
+import SimpleInput from "./components/SimpleInput.vue";
+import SimpleSearchInput from "./components/SimpleSearchInput.vue";
+import SimpleTextarea from "./components/SimpleTextarea.vue";
 
 @Component({
 	components: {
 		SimpleButton,
-		SimpleTextInput,
-		NeumorphismButton,
-		NeumorphismTextInput,
+		SimpleInput,
+		SimpleSearchInput,
+		SimpleTextarea,
 	},
 })
 export default class App extends Vue {}
@@ -46,9 +46,9 @@ export default class App extends Vue {}
 }
 .example {
 	width: 400px;
-	padding: 40px;
+	padding: 20px;
 	h2 {
-		margin-bottom: 40px;
+		margin-bottom: 20px;
 
 		color: #36afff;
 	}
